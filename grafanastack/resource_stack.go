@@ -18,19 +18,16 @@ func resourceStack() *schema.Resource {
 				Type:        schema.TypeString,
 				Required:    true,
 				Description: "The name of the resource, also acts as it's unique ID",
-				ForceNew:    true,
 			},
 			"accesskey": {
 				Type:        schema.TypeString,
 				Required:    true,
 				Description: "The name of the resource, also acts as it's unique ID",
-				ForceNew:    true,
 			},
 			"stackname": {
 				Type:        schema.TypeString,
 				Required:    true,
 				Description: "The name of the resource, also acts as it's unique ID",
-				ForceNew:    true,
 			},
 			"slug": {
 				Type:        schema.TypeString,
@@ -38,10 +35,9 @@ func resourceStack() *schema.Resource {
 				Description: "A description of an item",
 			},
 			"region": {
-				Type:        schema.TypeSet,
+				Type:        schema.TypeString,
 				Optional:    true,
 				Description: "An optional list of tags, represented as a key, value pair",
-				Elem:        &schema.Schema{Type: schema.TypeString},
 			},
 		},
 		Create: resourceCreateStack,
