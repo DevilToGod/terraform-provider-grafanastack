@@ -26,7 +26,7 @@ func Provider(version string) func() *schema.Provider {
 
 			ResourcesMap: map[string]*schema.Resource{
 				// Grafana
-
+				"grafanastack_newstack": resourceStack(),
 			},
 		}
 
