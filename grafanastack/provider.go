@@ -17,11 +17,6 @@ func Provider(version string) func() *schema.Provider {
 					Required:    true,
 					DefaultFunc: schema.EnvDefaultFunc("GRAFANA_URL", ""),
 				},
-				"name": {
-					Type:        schema.TypeString,
-					Required:    true,
-					DefaultFunc: schema.EnvDefaultFunc("GRAFANA_STACK_NAME", ""),
-				},
 				"accesskey": {
 					Type:        schema.TypeString,
 					Required:    true,
